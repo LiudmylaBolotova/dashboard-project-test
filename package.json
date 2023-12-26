@@ -1,0 +1,19 @@
+{
+  "name": "dashboard-project-test",
+  "version": "1.0.0",
+  "description": "The page was designed for a test task using Figma, Pug, JavaScript, CSS;",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node main"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "dependencies": {
+    "pug": "^3.0.2"
+  }
+}

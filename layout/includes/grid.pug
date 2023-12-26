@@ -1,0 +1,32 @@
+.wrapper
+  h3.wrapper__title All Customers
+  h4.wrapper__subtitle Active Members
+  .search-wrapper
+    input.search-wrapper__input(type="search", placeholder="Search", id="search-input")
+    label(for="search-input")
+      button.search-wrapper__button
+        svg.search-wrapper__svg
+          use(href="./images/icons.svg#icon-search")
+
+
+  table.table
+    tr.table__row.table__row--name
+      td.table__cell.table__cell--name Customer Name
+      td.table__cell.table__cell--name Company
+      td.table__cell.table__cell--name Phone Number
+      td.table__cell.table__cell--name Email
+      td.table__cell.table__cell--name Country
+      td.table__cell.table__cell--name Status
+
+    each user in users
+      tr.table__row.table__row--user
+        td.table__cell= user.name
+        td.table__cell= user.company
+        td.table__cell= user.phone
+        td.table__cell= user.email
+        td.table__cell= user.country
+        td.table__cell.table__cell--status
+          button.btn(class=user.status.toLowerCase())= user.status
+  .wrapper__bottom-block
+    p.wrapper__bottom-block__text Showing data 1 to 8 of  256K entries
+    include pagination
