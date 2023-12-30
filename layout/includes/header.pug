@@ -1,14 +1,14 @@
 header.header
     .header--block
-        .header__title 
+        .header__title
             svg.header__title__icon
                 use(href="./images/icons.svg#icon-setting")
-           
-            h1.header__title__text Dashboard 
-            p.header__title__text-small 
-                sub v.01
+            .header__title__text
+                h1.header__title__text--big Dashboard
+                p.header__title__text--small v.01
+          
         nav(role="navigation")
-            ul.header-list 
+            ul.header-list
                 li.header-list__item
                     .header-list__item--left
                         svg.header-list__svg
@@ -49,9 +49,63 @@ header.header
                         a.header-list__link(href="#") Help
                     svg.header-list__svg--right
                         use(href="./images/icons.svg#icon-chevron-right")
+            .navigation-mini 
+                //- button#toggleListButton.button 
+                //-     svg.header-list__svg--open
+                //-         use(href="./images/icons.svg#icon-menu")
+                button#closeListButton.button(style="display: none;")
+                    svg.header-list__svg--close
+                        use(href="./images/icons.svg#icon-close")
+                ul.header-list#listContainer
+                    li.header-list__item
+                        .header-list__item--left
+                            svg.header-list__svg
+                                use(href="./images/icons.svg#icon-key-square")
+                            a.header-list__link(href="#") Dashboard
+                    li.header-list__item
+                        .header-list__item--left
+                            svg.header-list__svg
+                                use(href="./images/icons.svg#icon-d-square")
+                            a.header-list__link(href="#") Product
+                            svg.header-list__svg--right
+                                use(href="./images/icons.svg#icon-chevron-right")
+                    li.header-list__item
+                        .header-list__item--left
+                            svg.header-list__svg
+                                use(href="./images/icons.svg#icon-user-square")
+                            a.header-list__link(href="#") Customers
+                            svg.header-list__svg--right
+                                use(href="./images/icons.svg#icon-chevron-right")
+                    li.header-list__item
+                        .header-list__item--left
+                            svg.header-list__svg
+                                use(href="./images/icons.svg#icon-wallet-money")
+                            a.header-list__link(href="#") Income
+                            svg.header-list__svg--right
+                                use(href="./images/icons.svg#icon-chevron-right")
+                    li.header-list__item
+                        .header-list__item--left
+                            svg.header-list__svg
+                                use(href="./images/icons.svg#icon-discount-shape")
+                            a.header-list__link(href="#") Promote
+                            svg.header-list__svg--right
+                                use(href="./images/icons.svg#icon-chevron-right")
+                    li.header-list__item
+                        .header-list__item--left
+                            svg.header-list__svg
+                                use(href="./images/icons.svg#icon-message-question")
+                            a.header-list__link(href="#") Help
+                            svg.header-list__svg--right
+                                use(href="./images/icons.svg#icon-chevron-right")
+    button#toggleListButton.button 
+                    svg.header-list__svg--open
+                        use(href="./images/icons.svg#icon-menu")
+
     .user
-        .user__user-avatar 
+        .user__user-avatar
             img(src='./images/avatar.png', alt='Users avatar')
-        .user__user-data 
-                p.user__user-data--bold Evano
-                p.user__user-data--small Project Manager
+        .user__user-data
+            p.user__user-data--bold Evano
+            p.user__user-data--small Project Manager
+
+    
