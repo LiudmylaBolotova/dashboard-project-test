@@ -1,14 +1,15 @@
 .wrapper
-  h3.wrapper__title All Customers
-  h4.wrapper__subtitle Active Members
+  .wrapper--top
+    h3.wrapper__title All Customers
+    h4.wrapper__subtitle Active Members
   .search-wrapper
-    input.search-wrapper__input(type="search", placeholder="Search", id="search-input")
     label(for="search-input")
+      input.search-wrapper__input(type="search", placeholder="Search", id="search-input")
       button.search-wrapper__button
         svg.search-wrapper__svg
           use(href="./images/icons.svg#icon-search")
-
-
+          title="Search"
+          
   table.table
     tr.table__row.table__row--name
       td.table__cell.table__cell--name Customer Name
@@ -28,5 +29,5 @@
         td.table__cell.table__cell--status
           button.btn(class=user.status.toLowerCase())= user.status
   .wrapper__bottom-block
-    p.wrapper__bottom-block__text Showing data 1 to 8 of  256K entries
+    p.wrapper__bottom-block__text Showing data 1 to 8 of 256K entries
     include pagination
